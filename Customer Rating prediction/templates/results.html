@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+    
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css')}}">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+
+    <title>Contact Form #6</title>
+  </head>
+  <body>
+  
+
+  <div class="content">
+    
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          
+
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+                {% if prediction == 1 %}
+                      <h3 class="heading mb-4">The Customer Rating is 1 Star </h3>
+                      <img class="gif" src="{{ url_for('static', filename='images/tenor.gif') }}" alt="1 star">
+                {% elif prediction == 2 %}
+                      <h3 class="heading mb-4">The Customer Rating is 2 Star</h3>
+                      <img class="gif" src="{{ url_for('static', filename='images/2star.gif') }}" alt="2 star">
+                {% elif prediction == 3 %}
+                      <h3 class="heading mb-4">The Customer Rating is 3 Star</h3>
+                      <img class="gif" src="{{ url_for('static', filename='images/3star.gif') }}" alt="3 star">
+                {% elif prediction == 4 %}
+                      <h3 class="heading mb-4">The Customer Rating is 4 Star</h3>
+                      <img class="gif" src="{{ url_for('static', filename='images/4 star.gif') }}" alt="4 star">
+                {% elif prediction == 5 %}
+                      <h3 class="heading mb-4">The Customer Rating is 5 Star</h3>
+                      <img class="gif" src="{{ url_for('static', filename='images/5 star.gif') }}" alt="5 star">
+                {% endif %}            
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+    
+    
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
